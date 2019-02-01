@@ -1,0 +1,45 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: eb30612213763681c1d4885650af85aa7adb1f9c10b15c9762bff82fe4c31aed
+
+name:           nubBench
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/AndreasPK/nubBench#readme>
+homepage:       https://github.com/AndreasPK/nubBench#readme
+bug-reports:    https://github.com/AndreasPK/nubBench/issues
+author:         Andreas Klebinger
+maintainer:     example@example.com
+copyright:      2018 Andreas Klebinger
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/AndreasPK/nubBench
+
+executable nubBench
+  main-is: Main.hs
+  other-modules:
+      Paths_nubBench
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , relude
+    , hashable
+    , criterion
+    , text
+    , array
+    , discrimination
+
+  default-language: Haskell2010
+
